@@ -22,6 +22,7 @@ class LogGameEvents(models.Model):
     class Meta:
         managed = False
         db_table = 'log_game_events'
+        verbose_name_plural = 'LogGameEvents'
 
 
 class PlayerAchievements(models.Model):
@@ -33,6 +34,7 @@ class PlayerAchievements(models.Model):
         managed = False
         db_table = 'player_achievements'
         unique_together = (('player', 'achievement_id'),)
+        verbose_name_plural = 'Player_achievements'
 
 
 class PlayerSessions(models.Model):
@@ -45,6 +47,7 @@ class PlayerSessions(models.Model):
     class Meta:
         managed = False
         db_table = 'player_sessions'
+        verbose_name_plural = 'player_sessions'
 
 
 class PlayerStats(models.Model):
@@ -56,6 +59,7 @@ class PlayerStats(models.Model):
     class Meta:
         managed = False
         db_table = 'player_stats'
+        verbose_name_plural = 'player_stats'
 
 
 class Players(models.Model):
@@ -69,3 +73,4 @@ class Players(models.Model):
     class Meta:
         managed = False
         db_table = 'players'
+        verbose_name_plural = 'players'
