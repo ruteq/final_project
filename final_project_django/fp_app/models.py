@@ -32,7 +32,7 @@ class PlayerAchievements(models.Model):
     class Meta:
         managed = False
         db_table = 'player_achievements'
-        unique_together = (('player_id', 'achievement_id'),)
+        unique_together = (('player', 'achievement_id'),)
 
 
 class PlayerSessions(models.Model):
